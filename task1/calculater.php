@@ -5,7 +5,7 @@
         $num2 = $_POST['number_two'];
 
 
-        if( $_POST['submit']=='sum'){
+        if( $_POST['submitxsum'){
             $out = $num1 + $num2 ;
             $res = "Addition is" . ' ' . $out ;
         }elseif($_POST['submit']=='min'){

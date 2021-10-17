@@ -69,6 +69,7 @@ $users = [
 ];
 
 
+
 ?>
 
 <!doctype html>
@@ -89,20 +90,16 @@ $users = [
     <div class="container mt-5">
         <div class="row">
             <table class="table">
+
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">gender</th>
-                        <th scope="col">hobbies</th>
-                        <th scope="col">activities</th>
-
+                        <?php  foreach($users[0] as $k => $v ){ ?>
+                        <th scope="col"> <?=  $k;  ?> </th> <?php } ?>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                        foreach($users as $index => $user ) {
-                        foreach ($user->gender as $genders => $genValue){?>
+                    <?php foreach($users as $index => $user ) { 
+                      foreach ($user->gender as $genders => $genValue){?>
                     <tr>
                         <th scope="row"> <?= $user->id ?> </th>
                         <td> <?= $user->name ?> </td>
