@@ -91,7 +91,7 @@ if (isset($_POST['enter'])) {
                     <tr>
                         <td> <?= interest($year); ?> </td>
                         <td> <?= $loan_after; ?> </td>
-                        <td> <?= monthlyCalc($year, $loan_after); ?> </td>
+                        <td> <?= Round(monthlyCalc($year, $loan_after)); ?> </td>
                     <?php
                 }
                     ?>
